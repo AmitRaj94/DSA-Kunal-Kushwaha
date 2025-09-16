@@ -17,25 +17,17 @@ public class Calculator {
                 int num2 = input.nextInt();
 
                 switch (op) {
-                    case '+':
-                        result = num1 + num2;
-                        break;
-                    case '-':
-                        result = num1 - num2;
-                        break;
-                    case '*':
-                        result = num1 * num2;
-                        break;
-                    case '/':
+                    case '+' -> result = num1 + num2;
+                    case '-' -> result = num1 - num2;
+                    case '*' -> result = num1 * num2;
+                    case '/' -> {
                         if (num2 == 0) {
                             System.out.println("Error: Division by zero is not allowed.");
                             continue;
                         }
                         result = num1 / num2;
-                        break;
-                    case '%':
-                        result = num1 % num2;
-                        break;
+                    }
+                    case '%' -> result = num1 % num2;
                 }
 
                 System.out.println("Result: " + result);
